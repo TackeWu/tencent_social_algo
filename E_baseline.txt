@@ -1,0 +1,27 @@
+test 集里 有 8452 个1
+
+0.101467      col = ['connectionType', 'telecomsOperator', 'camgaignID',
+                   'appID', 'appPlatform', 'is_app_actions', 'advertiserID',
+                   'age', 'gender', 'education', 'residence', 'sitesetID', 'positionType']
+
+
+max_depth   n_splits    test_size    TRN logloss            VLD logloss            线上分数     备注
+14          3           0.100000     0.09672836526785211    0.09982102624849803    0.109273    第一次提特征
+14          3           0.100000     -------------------    -------------------    0.107352    用户婚姻等
+14          3           0.300000     0.09500721124396161    0.10086409448372675    0.107148    加上小时 和 去掉30天
+14          3           0.300000     0.09621013951196161    0.10136138888372675    0.108325    creativeID 分5类
+14          3           0.300000     0.09612531841196161    0.10137389317772675    --------    creativeID 分4类 去掉点击数不足的
+14          3           0.300000     0.09499142108732812    0.10126097975619257    --------    不考虑creativeID
+14          3           0.300000     0.09682432276320731    0.10063963395445187    0.10871     分类creativeID,adID,camgaignID,advertiserID
+14          3           0.300000     0.10607265458044984    0.10603178217142266    --------    只用3个特征
+4           3           0.300000     0.10632133496811003    0.10628339762932633    0.111488    只用3个特征
+14          3           0.300000     0.09515543042526342    0.10113895731310318    --------    hour town_sheng 没去hometown
+14          3           0.300000     0.09504161197756515    0.10103235558755012    --------    hour 没去homwtown
+14          3           0.300000     0.09453630851585848    0.10067976316739685    --------    hour 'advertiserID','creativeID adID
+14          3           0.300000     0.09453630851585848    0.10067976316739685    --------    hour 'advertiserID', creativeID
+14          3           0.300000     0.09453630851585848    0.10067976316739685    --------    hour 'advertiserID', creativeID
+14          3           0.300000     0.0935481146688399     0.10062397731352601    0.107505    n_estimators=32, max_depth=14, min_samples_split=100, min_samples_leaf=10, random_state=0,
+                               criterion='entropy', max_features=8, verbose = 1, n_jobs=-1, bootstrap=False
+
+
+

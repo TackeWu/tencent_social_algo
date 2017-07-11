@@ -1,0 +1,3 @@
+appPlatform     差别不大  0.1%
+user installed app 可以用来给用户做一个聚类  无监督的聚类
+
